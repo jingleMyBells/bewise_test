@@ -1,0 +1,5 @@
+DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/postgres
+INTERSECTIONS_MAXIMUM=100
+APP_TITLE=Test Bewise
+APP_DESCRIPTION=Test descr
+QUESTION_API_URL=https://jservice.io/api/random?count=

@@ -1,21 +1,38 @@
-# bewise_test
+# Тестовое задание data_fort
 
-alembic upgrade head
+## Описание функциональности
+Модуль для опроса апи jservice.io для получения и сохранения вопросов
+
+###### Для запуска необходимы docker и docker-compose
+###### [Инструкции по установке докера](https://docs.docker.com/engine/install/)
+
+#### Шаги:
+
+Склонировать репозиторий
+```bash
+git clone git@github.com:jingleMyBells/bewise_test.git
+```
+
+Перейти в каталог с проектом и конфигурационным файлом развертки
+```bash
+cd bewise_test/deploy
+```
+
+Создать .env файл
+```bash
+cat env-example.txt > .env
+```
+
+Запустить проект 
+```bash
+  docker-compose up
+```
 
 
-хелсчек
+###### Заметки:
+Rate limit целевого API с вопросами в явном виде найти не удалось,
+но его существование заявлено владельцем сервиса. Под этот лимит можно было бы настроить
+какую-то очередь, расписание или паузы чтобы не вызывать отказы. Однако поскольку тематика ТЗ скорее про 
+КВИЗы, нежели про большое кол-во запросов, заморачиваться чрезмерно смысла нет.
 
-  db:
-    image: postgres:15
-    ports:
-      - "5432:5432"
-    volumes:
-      - database:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
 
-- надо сделать деплой через сборку
-- надо написать ридми
