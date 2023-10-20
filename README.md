@@ -16,3 +16,6 @@ alembic upgrade head
       interval: 5s
       timeout: 5s
       retries: 5
+
+- надо сделать деплой через сборку
+- надо написать ридми

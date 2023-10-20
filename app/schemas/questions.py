@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from pydantic import BaseModel, Extra, Field, validator
+from pydantic import BaseModel, PositiveInt
 
 
 class QuestionCount(BaseModel):
-    questions_num: int = Field(...)
+    questions_num: PositiveInt
 
 
 class Question(BaseModel):
