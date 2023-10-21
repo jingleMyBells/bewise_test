@@ -28,6 +28,11 @@ cat env-example.txt > .env
   docker-compose up
 ```
 
+Эндпоинт будет доступен по адресу 
+```bash
+  http://localhost/question
+```
+
 
 ###### Заметки:
 Rate limit целевого API с вопросами в явном виде найти не удалось,
