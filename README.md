@@ -25,12 +25,12 @@ cat env-example.txt > .env
 
 Запустить проект 
 ```bash
-  docker-compose up
+docker-compose up
 ```
 
 Эндпоинт будет доступен по адресу 
 ```bash
-  http://localhost/question
+http://localhost/question
 ```
 
 
